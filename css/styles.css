@@ -10,13 +10,80 @@
     --primary-background-color: #FFFFFF;
     --secondary-background-color: #2F303A;
     --overlay-background-color: #F5F4FA;
+    --card-set-gap: 30px;
 }
+
+/* * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+} */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+button {
+cursor: pointer;
+}
+
+img {
+    display: block;
+    /* max-width: 100%; */
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--primary-text-color);
     background-color: var(--primary-background-color);
+}
+
+.page-header {
+    height: 80px;
+}
+
+.container {
+    width: 1200px;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    margin: 0px 215px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+padding: 94px 0px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.auth-nav {
+    display: flex; 
 }
 
 .header-logo {
@@ -98,7 +165,6 @@ color: var(--secondary-text-color)
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    cursor: pointer;
 }
 
 .head-btn:hover,
@@ -112,23 +178,13 @@ color: var(--secondary-text-color)
 .visual-list,
 .team-list,
 .list-address,
-.visually-list,
 .foto-list {
     list-style: none;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
+
+
+
 
 .little-title {
 font-weight: 700;
@@ -207,6 +263,27 @@ letter-spacing: 0.03em;
     color: var(--accent-color);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.visually-list {
+    list-style: none;
+    /* padding: 0px;
+    margin: 0px; */
+    display: flex;
+    margin-bottom: 50px;
+}
+
 .filter-btn {
     font-family: inherit;
     background-color: var(--overlay-background-color);
@@ -216,7 +293,6 @@ letter-spacing: 0.03em;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
-    cursor: pointer;
 }
 
 .filter-btn:hover,
@@ -225,6 +301,30 @@ letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
+.foto-list {
+    list-style: none;
+    /* padding: 0px;
+    margin: 0px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.foto-list>.item {
+    flex-basis: calc(100%/3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+}
+
+.item * {
+    outline: 1px solid tomato;
+}
+
+.card-content {
+    padding: 20px 24px;
+    border: 1px solid var(--overlay-color);
+}
 
 .foto-title {
 font-weight: 700;
@@ -232,6 +332,7 @@ font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
 color: var(--title-text-color)
+margin-bottom: 4px;
 }
 
 .foto-text {
@@ -240,4 +341,6 @@ line-height: 1.88;
 letter-spacing: 0.03em;
 color: var(--primary-text-color)
 }
+
+
 
